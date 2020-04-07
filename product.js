@@ -44,7 +44,7 @@ app.post('/searchname',async(req,res)=>{
     try {
         var searchkey =req.body.key;
 
-        productmodel.find({"name":key},(error,data)=>{
+        await productmodel.find({"name":key},(error,data)=>{
 
             if (error) {
 
