@@ -34,6 +34,7 @@ app.post('/insert',async(req,res)=>{
 app.get('/viewall',async(req,res)=>{
     try {
         var result = await productmodel.find();
+        res.send(result);
     } catch (error) {
         console.log(error);
         res.status(500).send(error);
