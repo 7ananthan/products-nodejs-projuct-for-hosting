@@ -64,7 +64,7 @@ app.post('/searchcode',async(req,res)=>{
     try {
         var searchkey =req.body.key;
 
-        productmodel.find({"code":key},(error,data)=>{
+        productmodel.find({"code":searchkey},(error,data)=>{
 
             if (error) {
 
